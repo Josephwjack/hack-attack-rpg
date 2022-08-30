@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+dist/
+coverage/
+.env
+*.coverage
+*.coveragexml
+coverage/
+.vscode/
+# Webpack build files
+# dist/
+package-lock.json
