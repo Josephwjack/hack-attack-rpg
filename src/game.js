@@ -33,11 +33,19 @@ export const nameChange = (nameProp) => {
   };
 };
 
+export const retaliate = () => {
+  const autoRetaliate = [emp, malware, fireWall, batteryPack, theWorm, bruteForce];
+  const compSelect = Math.floor(Math.random() * (autoRetaliate.length));
+  const compTurn = cyborgState(autoRetaliate[compSelect]);
+  console.trace(compSelect);
+  return compTurn;
+};
+
 export const hackerAttack = () => {
-  const hackerFunctions = [redbull, vpn];
+  const hackerFunctions = [coffee, redbull, adrenalineInjection, vpn, medPack, fullStackCourse, cyborgAttack];
   const selected = Math.floor(Math.random() *(hackerFunctions.length));
-  const hackerTurn = hackerState(selected);
-  console.log(hackerTurn);
+  const hackerTurn = hackerState(hackerFunctions[selected]);
+  console.trace(selected);
   return hackerTurn;
 };
 //Function Factory 

@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { hackerState, cyborgState, } from './game.js';
+import { hackerState, cyborgState, hackerAttack, retaliate} from './game.js';
 
 function currentStats() { 
   const currentState = hackerState();
@@ -15,9 +15,9 @@ function currentStats() {
 
 function cyborgStats() {
   const currentState = cyborgState();
-  $('#cyb-power').text('Power:'+ currentState.power);
-  $('#cyb-antiVirus').text('Virus-Protection:'+ currentState.antiVirus);
-  $('#cyb-health').text('Health:'+ currentState.health);
+  $('#cyb-power').text('Power:' + currentState.power);
+  $('#cyb-antiVirus').text('Virus-Protection:' + currentState.antiVirus);
+  $('#cyb-health').text('Health:' + currentState.health);
   console.log(currentState.power);
 }
 
@@ -30,8 +30,19 @@ $(document).ready(function() {
     const currentCyborg = cyborgState();
     currentStats();
     cyborgStats();
-    console.log(currentState);
-    console.log(currentCyborg);
+    // console.log(currentState);
+    // console.log(currentCyborg);
+  });
+
+  $('#fight').click(function(){
+    
+    const hackerTurn = hackerState();
+    hackerAttack();
+    console.log(hackerTurn);
+    currentStats();
+    retaliate();
+    cyborgStats();
+   
   });
 
 
