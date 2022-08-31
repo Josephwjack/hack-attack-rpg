@@ -33,7 +33,12 @@ export const nameChange = (nameProp) => {
   };
 };
 
-
+const hackerAttack = () => {
+  const hackerFunctions = [redbull, vpn];
+  const selected = Math.floor(Math.random() *(hackerFunctions.length));
+  const hackerTurn = hackerState(selected);
+  console.log(hackerTurn);
+}
 //Function Factory 
 
 //Hacker Power Up Functions
