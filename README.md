@@ -1,9 +1,11 @@
-# (Application Name)
+# Hack Attack RPG
 
-#### (Brief Description of Application)
+#### By Joe Roaden & Joe Jack  
 
-#### By (Joseph Jack)  [GitHub Pages link]
+## Description
+_This repository allows you to pull the files for use in your own project, including (_ tests _/.., src/.., .babelrc, .eslintrc, .gitignore, package-lock.json, package.json, webpack.config.js)_ 
 
+</hr>
 ## Technologies Used
 
 * _List all_
@@ -11,8 +13,6 @@
 * _you used in your project_
 * _here_
 
-## Description
-_This repository allows you to pull the files for use in your own project, including (_ tests _/.., src/.., .babelrc, .eslintrc, .gitignore, package-lock.json, package.json, webpack.config.js)_ 
 ## Setup/Installation Requirements
 
 1. Fork this repository to your github account.
