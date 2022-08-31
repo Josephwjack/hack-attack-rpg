@@ -34,12 +34,12 @@ export const nameChange = (nameProp) => {
 
 //Function Factory below
 //Properties - stealth, health, intelligence (int), focus, name 
+
 //Power up functions - (coffee(increase focus, decrease health if possible), redbull power up, adrenaline injection, vpn(stealth), malware (increase intelligence, disable comms, brute force (increase intelligence damage stealth) )
 
+//Power Up Functions
 export const coffee = changeState("focus")(1);
 export const vpn = changeState("stealth")(2);
 export const malware = changeState("int")(4);
-
-
-
-// export const newName = nameChange("name");
+//Add Name
+export const newName = nameChange("name");

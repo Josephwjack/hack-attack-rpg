@@ -1,4 +1,4 @@
-import { hackerState, coffee, vpn, malware} from "../src/game.js";
+import { hackerState, coffee, vpn, malware, newName} from "../src/game.js";
 
 describe ("Hacker", () => {
 
@@ -17,5 +17,8 @@ describe ("Hacker", () => {
     expect(malware(hacker)).toEqual({stealth: 0, health: 0, int: 4, focus: 0, name: ""});
   });
 
+  test("newName will implement a name property to a character", () => {
+    expect(hackerState(newName("whiteRabbit"))).toEqual({stealth: 3, health: 10, int: 3, focus: 3, name: "whiteRabbit"});
+  });
 
 });
