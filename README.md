@@ -5,6 +5,13 @@
 ## Description
 _This repository allows you to pull the files for use in your own project, including (_ tests _/.., src/.., .babelrc, .eslintrc, .gitignore, package-lock.json, package.json, webpack.config.js)_ 
 
+//Thursday Goals
+- Conditionals for when game is over, health < 0
+- Update a bit of styling to split hacker and cyborg stats into columns - VS set up
+- Add a custom name to Hacker before play
+- Make a splash page of sorts where you enter your name - hit begin
+
+
 </hr>
 ## Technologies Used
 
