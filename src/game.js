@@ -1,5 +1,7 @@
-export const storeState = () => {
-  let currentState = {};
+export const initialHackerState = { stealth: 3, health: 10, int: 3, focus: 2, name: ""};
+
+export const storeState = (initialState) => {
+  let currentState = initialState;
   return (stateChangeFunction = state => state) => {
     const newState = stateChangeFunction(currentState);
     currentState = {...newState};
@@ -7,6 +9,7 @@ export const storeState = () => {
   };
 };
 
+export const hackerState = storeState(initialHackerState);
 export const stateControl = storeState();
 
 export const changeState = (prop) => {
@@ -34,7 +37,8 @@ export const nameChange = (nameProp) => {
 //Power up functions - (coffee(increase focus, decrease health if possible), redbull power up, adrenaline injection, vpn(stealth), malware (increase intelligence, disable comms, brute force (increase intelligence damage stealth) )
 
 export const coffee = changeState("focus")(1);
-
+export const vpn = changeState("stealth")(2);
+export const malware = changeState("int")(4);
 
 
 
