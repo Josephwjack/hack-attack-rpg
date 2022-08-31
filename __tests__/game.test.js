@@ -21,4 +21,8 @@ describe ("Hacker", () => {
     expect(hackerState(newName("whiteRabbit"))).toEqual({stealth: 3, health: 10, int: 3, focus: 3, name: "whiteRabbit"});
   });
 
+  test("newName will change an existing name of a character", () => {
+    expect(hackerState(newName("whiteHat"))).toEqual({stealth: 3, health: 10, int: 3, focus: 3, name: "whiteHat"});
+  });
+
 });
