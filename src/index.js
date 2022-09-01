@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { hackerState, cyborgState, hackerAttack, retaliate} from './game.js';
+import { hackerState, cyborgState, hackerAttack, retaliate, theWorm} from './game.js';
 
 function currentStats() { 
   const currentState = hackerState();
@@ -24,6 +24,7 @@ function cyborgStats() {
 function gameOver() { 
   const currentState = hackerState();
   const currentCyborg = cyborgState();
+
   if (currentState.health <= 0 && currentCyborg.power >= 0) {
     $('#show-winner').text('The Cyborg has defeated you');
     console.log("show winner");
@@ -57,6 +58,16 @@ $(document).ready(function() {
     console.log(hackerTurn);
     currentStats();
     retaliate();
+    cyborgStats();
+    const currentState = hackerState();
+    const currentCyborg = cyborgState();
+    if(currentState.int >= 9 ){
+      $("#wormButton").show();
+    }
+    gameOver();
+  });
+  $("#worm").click(function() {
+    cyborgState(theWorm);
     cyborgStats();
     gameOver();
   });

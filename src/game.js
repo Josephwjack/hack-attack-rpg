@@ -63,7 +63,7 @@ export const emp = changeState("power")(-3);
 export const malware = changeState("antiVirus")(-3);
 export const fireWall = changeState("antiVirus")(3);
 export const batteryPack = changeState("power")(3);
-export const theWorm = changeState("health")(-5);
+export const theWorm = changeState("power")(-5);
 export const bruteForce = changeState("antiVirus")(-1);
 
 //Add Name

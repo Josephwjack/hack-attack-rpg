@@ -32,7 +32,7 @@ body {
 
 :root {
   --clr-neon: #f0f;
-  --clr-bg: #0C0F0A;
+  --clr-bg: hsl(188, 91%, 50%);
 }
 
 *,
@@ -100,4 +100,9 @@ body {
 }
 .neon-button:hover::after, .neon-button:focus::after {
   opacity: 1;
+}
+
+#wormButton {
+  display: none;
+  
 }
