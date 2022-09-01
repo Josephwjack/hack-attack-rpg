@@ -21,6 +21,19 @@ function cyborgStats() {
   console.log(currentState.power);
 }
 
+function gameOver() { 
+  const currentState = hackerState();
+  const currentCyborg = cyborgState();
+  if (currentState.health <= 0 || currentCyborg.power <= 0) {
+    $('#show-winner').text('Game Over');
+    console.log("show winner");
+  }
+  else {
+    currentStats();
+    cyborgStats();
+  }
+}
+
 
 
 $(document).ready(function() {
@@ -42,10 +55,6 @@ $(document).ready(function() {
     currentStats();
     retaliate();
     cyborgStats();
-   
+    gameOver();
   });
-
-
-
-
 });
