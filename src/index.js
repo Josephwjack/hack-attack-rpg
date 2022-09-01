@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { hackerState, cyborgState, hackerAttack, retaliate, theWorm} from './game.js';
+import { hackerState, cyborgState, hackerAttack, retaliate, theWorm, medPack} from './game.js';
 
 function currentStats() { 
   const currentState = hackerState();
@@ -54,21 +54,39 @@ $(document).ready(function() {
   $('#fight').click(function(){
     
     const hackerTurn = hackerState();
+    const currentState = hackerState();
+    const currentCyborg = cyborgState();
     hackerAttack();
     console.log(hackerTurn);
     currentStats();
     retaliate();
     cyborgStats();
-    const currentState = hackerState();
-    const currentCyborg = cyborgState();
     if(currentState.int >= 9 ){
       $("#wormButton").show();
     }
+    else if(currentState.health <= 8) {
+      $("#medpackButton").show();
+      
+    }
+    else if(currentState.health >= 8) {
+      $("#medpackButton").hide();
+    }
     gameOver();
+    
+    
   });
   $("#worm").click(function() {
     cyborgState(theWorm);
     cyborgStats();
     gameOver();
   });
+  
+  $("#medPack").click(function() {
+    hackerState(medPack);
+    currentStats();
+    gameOver();
+  });
+
+  
+
 });
