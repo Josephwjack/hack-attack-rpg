@@ -2,7 +2,7 @@
 
 #### By Joe Roaden & Joe Jack  
 
-<div style="display: flex; justify-content: center"><img src="imgs/screenimage.png"></div>
+<div style="display: flex; justify-content: center"><img src="img/screenimage.png"></div>
 
 ## Description
 _This repository allows you to pull the files for use in your own project, including (_ tests _/.., src/.., .babelrc, .eslintrc, .gitignore, package-lock.json, package.json, webpack.config.js)_ 
