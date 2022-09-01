@@ -24,9 +24,12 @@ function cyborgStats() {
 function gameOver() { 
   const currentState = hackerState();
   const currentCyborg = cyborgState();
-  if (currentState.health <= 0 || currentCyborg.power <= 0) {
-    $('#show-winner').text('Game Over');
+  if (currentState.health <= 0 && currentCyborg.power >= 0) {
+    $('#show-winner').text('The Cyborg has defeated you');
     console.log("show winner");
+  }
+  else if(currentState.health >= 0 && currentCyborg.power <= 0) {
+    $('#show-winner').text("You Win!");
   }
   else {
     currentStats();
