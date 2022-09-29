@@ -47,8 +47,8 @@ $(document).ready(function() {
     const currentCyborg = cyborgState();
     currentStats();
     cyborgStats();
-    // console.log(currentState);
-    // console.log(currentCyborg);
+    console.log(currentState);
+    console.log(currentCyborg);
   });
 
   $('#fight').click(function(){
@@ -58,6 +58,7 @@ $(document).ready(function() {
     const currentCyborg = cyborgState();
     hackerAttack();
     console.log(hackerTurn);
+    console.log(currentCyborg);
     currentStats();
     retaliate();
     cyborgStats();

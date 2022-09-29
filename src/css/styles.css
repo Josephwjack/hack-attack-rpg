@@ -23,6 +23,9 @@ body {
   0 0 100px 60px #f0f, /* middle magenta */
   0 0 140px 90px #0ff; /* outer cyan */;
 }
+.column {
+  text-align: center;
+}
 
 .jumbotron {
   box-shadow: 0 0 60px 30px #fff,  /* inner white */
@@ -44,7 +47,8 @@ body {
 .neon-button {
   font-size: 3rem;
   color: var(--clr-neon);
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   text-decoration: none;
   border: var(--clr-neon) .125em solid;
@@ -106,7 +110,10 @@ body {
   display: none;
   
 }
-
+.game-buttons {
+  display: flex;
+  justify-content: space-between;
+}
 #medpackButton {
   display: none;
   
